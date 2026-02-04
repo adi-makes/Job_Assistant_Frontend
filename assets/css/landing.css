@@ -1,0 +1,205 @@
+/* Header customization */
+.header {
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    padding: 8px 24px;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0 60px;
+    text-align: center;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    /* Fluid font size */
+    color: var(--text-dark);
+    margin-bottom: clamp(16px, 2vw, 32px);
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+    color: var(--text-body);
+    max-width: 800px;
+    margin: 0 auto clamp(30px, 4vw, 60px);
+}
+
+.hero-cta {
+    margin-bottom: 60px;
+}
+
+.hero-btn {
+    padding: clamp(14px, 1.5vw, 20px) clamp(40px, 4vw, 60px);
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+}
+
+/* Pill Navigation */
+.feature-pills {
+    display: inline-flex;
+    background: var(--secondary-color);
+    padding: 5px;
+    border-radius: 50px;
+    margin-bottom: 60px;
+}
+
+.pill {
+    padding: 10px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.pill.active {
+    /* Using active class for now */
+    background: var(--white);
+    color: var(--text-dark);
+    box-shadow: var(--shadow-sm);
+}
+
+.pill:hover:not(.active) {
+    color: var(--text-body);
+}
+
+/* Hero Image Placeholder */
+.hero-image-container {
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 60px 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.mockup-placeholder {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mockup-placeholder h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Features Grid */
+.features-grid-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 80px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: var(--secondary-color);
+    padding: 40px 30px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.feature-card h3 {
+    font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: clamp(0.95rem, 1.2vw, 1.25rem);
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* Footer CTA Section (Blue) */
+.footer-cta-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.footer-cta-section h3 {
+    color: var(--white);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .feature-pills {
+        display: none;
+        /* Hide complex pills on mobile for simplicity, or stack them */
+    }
+}
