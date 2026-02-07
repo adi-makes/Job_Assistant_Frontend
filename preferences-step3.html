@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3: Locations - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/preferences.css">
+<!--     <script src="assets/js/auth.js"></script>
+<!--     <script> -->
+<!--         if (!Auth || !Auth.isAuthenticated()) { -->
+<!--             window.location.href = 'login.html'; -->
+<!--         } -->
+<!--     </script>
+</head>
+
+<body>
+    <!-- Header Removed -->
+
+    <div class="preferences-container">
+        <!-- Progress -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 37.5%;"></div>
+        </div>
+
+        <div class="preferences-header">
+            <h1>Where would you like to work?</h1>
+            <p>Select multiple locations.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div style="margin-bottom: 40px; display: flex; justify-content: center;">
+            <input type="text" id="citySearch" class="form-control" placeholder="Search for a city..."
+                style="font-size: 1.1rem; padding: 16px 24px; border-radius: 50px; max-width: 500px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        </div>
+
+        <div class="options-grid">
+            <div class="option-card" data-value="remote-us">
+                <div class="option-label">Remote (US)</div>
+            </div>
+            <div class="option-card" data-value="remote-global">
+                <div class="option-label">Remote (Global)</div>
+            </div>
+            <div class="option-card" data-value="sf">
+                <div class="option-label">San Francisco, CA</div>
+            </div>
+            <div class="option-card" data-value="nyc">
+                <div class="option-label">New York, NY</div>
+            </div>
+            <div class="option-card" data-value="london">
+                <div class="option-label">London, UK</div>
+            </div>
+            <div class="option-card" data-value="austin">
+                <div class="option-label">Austin, TX</div>
+            </div>
+            <div class="option-card" data-value="seattle">
+                <div class="option-label">Seattle, WA</div>
+            </div>
+            <div class="option-card" data-value="toronto">
+                <div class="option-label">Toronto, CA</div>
+            </div>
+            <div class="option-card" data-value="la">
+                <div class="option-label">Los Angeles, CA</div>
+            </div>
+            <div class="option-card" data-value="chicago">
+                <div class="option-label">Chicago, IL</div>
+            </div>
+            <div class="option-card" data-value="boston">
+                <div class="option-label">Boston, MA</div>
+            </div>
+            <div class="option-card" data-value="bengaluru">
+                <div class="option-label">Bengaluru, India</div>
+            </div>
+            <div class="option-card" data-value="berlin">
+                <div class="option-label">Berlin, Germany</div>
+            </div>
+            <div class="option-card" data-value="singapore">
+                <div class="option-label">Singapore</div>
+            </div>
+            <div class="option-card" data-value="sydney">
+                <div class="option-label">Sydney, Australia</div>
+            </div>
+            <div class="option-card" data-value="dubai">
+                <div class="option-label">Dubai, UAE</div>
+            </div>
+            <div class="option-card" data-value="amsterdam">
+                <div class="option-label">Amsterdam, Netherlands</div>
+            </div>
+            <div class="option-card" data-value="dublin">
+                <div class="option-label">Dublin, Ireland</div>
+            </div>
+            <div class="option-card" data-value="telaviv">
+                <div class="option-label">Tel Aviv, Israel</div>
+            </div>
+            <div class="option-card" data-value="vancouver">
+                <div class="option-label">Vancouver, CA</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="preferences-footer">
+        <div class="container footer-content">
+            <a href="preferences-step4.html" id="nextBtn" class="btn btn-primary btn-next" disabled>Save & Continue</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/preferences.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setupSelectionLogic('option-card', 1, 10); // Allow up to 10 locations
+        });
+    </script>
+</body>
+
+</html>

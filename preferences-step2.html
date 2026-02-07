@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 2: Roles - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/preferences.css">
+<!--     <script src="assets/js/auth.js"></script>
+<!--     <script> -->
+<!--         if (!Auth || !Auth.isAuthenticated()) { -->
+<!--             window.location.href = 'login.html'; -->
+<!--         } -->
+<!--     </script>
+</head>
+
+<body>
+    <!-- Header Removed -->
+
+    <div class="preferences-container">
+        <!-- Progress -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 25%;"></div>
+        </div>
+
+        <div class="preferences-header">
+            <h1>What roles are you<br>interested in?</h1>
+            <p>Select up to 3 roles.</p>
+        </div>
+
+        <!-- Main Roles Grid -->
+        <div class="options-grid" id="mainRoles">
+            <!-- Software Engineering -->
+            <div class="option-card" data-value="software-engineering" data-target-section="sub-engineering">
+                <div class="option-icon">💻</div>
+                <div class="option-label">Software Engineering</div>
+            </div>
+
+            <!-- Product Management -->
+            <div class="option-card" data-value="product-management">
+                <div class="option-icon">📊</div>
+                <div class="option-label">Product Management</div>
+            </div>
+
+            <!-- Design -->
+            <div class="option-card" data-value="design">
+                <div class="option-icon">🎨</div>
+                <div class="option-label">Design</div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="option-card" data-value="data-science">
+                <div class="option-icon">📈</div>
+                <div class="option-label">Data Science</div>
+            </div>
+
+            <!-- Marketing -->
+            <div class="option-card" data-value="marketing">
+                <div class="option-icon">📢</div>
+                <div class="option-label">Marketing</div>
+            </div>
+
+            <!-- Sales -->
+            <div class="option-card" data-value="sales">
+                <div class="option-icon">💼</div>
+                <div class="option-label">Sales</div>
+            </div>
+
+            <!-- Operations -->
+            <div class="option-card" data-value="operations">
+                <div class="option-icon">⚙️</div>
+                <div class="option-label">Operations</div>
+            </div>
+
+            <!-- Finance -->
+            <div class="option-card" data-value="finance">
+                <div class="option-icon">💰</div>
+                <div class="option-label">Finance</div>
+            </div>
+        </div>
+
+        <!-- Sub Roles Section (Initially Hidden) -->
+        <div id="sub-engineering" class="sub-section">
+            <h3 style="margin-bottom: 20px;">Which specific Engineering roles?</h3>
+            <div class="options-grid">
+                <div class="option-card sub-option" data-value="frontend">
+                    <div class="option-label">Frontend Developer</div>
+                </div>
+                <div class="option-card sub-option" data-value="backend">
+                    <div class="option-label">Backend Developer</div>
+                </div>
+                <div class="option-card sub-option" data-value="fullstack">
+                    <div class="option-label">Full Stack Developer</div>
+                </div>
+                <div class="option-card sub-option" data-value="mobile">
+                    <div class="option-label">Mobile Developer</div>
+                </div>
+                <div class="option-card sub-option" data-value="devops">
+                    <div class="option-label">DevOps Engineer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="preferences-footer">
+        <div class="container footer-content">
+            <a href="preferences-step3.html" id="nextBtn" class="btn btn-primary btn-next" disabled>Save & Continue</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/preferences.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Main logic handled in shared JS, but initialize specific to this page if needed
+            setupSelectionLogic('option-card', 1, 3); // Main roles constraint
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 8: Status - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/preferences.css">
+<!--     <script src="assets/js/auth.js"></script>
+<!--     <script> -->
+<!--         if (!Auth || !Auth.isAuthenticated()) { -->
+<!--             window.location.href = 'login.html'; -->
+<!--         } -->
+<!--     </script>
+</head>
+
+<body>
+    <!-- Header Removed -->
+
+    <div class="preferences-container">
+        <!-- Progress -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 100%;"></div>
+        </div>
+
+        <div class="preferences-header">
+            <h1>Where are you in your<br>job search?</h1>
+            <p>This helps us prioritize opportunities.</p>
+        </div>
+
+        <div class="options-grid" id="statusGrid">
+            <div class="option-card" data-value="ready">
+                <div class="option-icon">🚀</div>
+                <div>
+                    <div class="option-label">Ready to interview</div>
+                    <div style="font-size: 0.9rem; color: var(--text-body); margin-top: 5px;">Actively applying &
+                        interviewing</div>
+                </div>
+            </div>
+
+            <div class="option-card" data-value="casual">
+                <div class="option-icon">👀</div>
+                <div>
+                    <div class="option-label">Casually looking</div>
+                    <div style="font-size: 0.9rem; color: var(--text-body); margin-top: 5px;">Open to opportunities
+                    </div>
+                </div>
+            </div>
+
+            <div class="option-card" data-value="not-looking">
+                <div class="option-icon">🚫</div>
+                <div>
+                    <div class="option-label">Not looking</div>
+                    <div style="font-size: 0.9rem; color: var(--text-body); margin-top: 5px;">Just exploring</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="preferences-footer">
+        <div class="container footer-content">
+            <a href="dashboard.html" id="nextBtn" class="btn btn-primary btn-next" disabled>Finish Setup</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/preferences.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setupSelectionLogic('option-card', 1, 1); // Select exactly 1
+        });
+    </script>
+</body>
+
+</html>

@@ -4,114 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resunex.ai - Your Complete Career Path</title>
+    <title>Job Assistant - Your Complete Career Path</title>
+    <meta name="description"
+        content="Elevate your job search with AI-powered resume optimization, application tracking, and interview preparation.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="index.html" class="brand-logo">resunex.ai</a>
-            <nav class="nav-links">
-                <a href="login.html" class="btn btn-outline nav-btn">Log In</a>
-                <a href="signup.html" class="btn btn-primary nav-btn">Sign Up</a>
-            </nav>
+    <!-- Navigation -->
+    <nav class="landing-nav">
+        <div class="container nav-container">
+            <div class="brand-text">Job Assistant</div>
+            <div class="nav-links">
+                <a href="login.html" class="nav-link-landing">Log In</a>
+                <a href="signup.html" class="btn btn-primary">Get Started</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container hero-content">
-            <h1 class="hero-title fade-in">Your complete career path.<br>Driven by your profile.</h1>
-            <p class="hero-subtitle fade-in" style="animation-delay: 0.2s;">
-                Generate custom job-tailored resumes, ATS-ready cover letters, and professional emails.
-                We're with you at every stage of the application process.
-            </p>
-            <div class="hero-cta fade-in" style="animation-delay: 0.4s;">
-                <a href="signup.html" class="btn btn-primary hero-btn">Sign Up — It's Free!</a>
-            </div>
-
-            <!-- Features Pill Navigation (Visual only for now) -->
-            <div class="feature-pills fade-in" style="animation-delay: 0.6s;">
-                <span class="pill active">Smart Resume Creator</span>
-                <span class="pill">Cover Letter</span>
-                <span class="pill">Networking Email</span>
-            </div>
-
-            <!-- Hero Image / Mockup -->
-            <div class="hero-image-container fade-in" style="animation-delay: 0.8s;">
-                <!-- Placeholder for the sophisticated resume builder UI image -->
-                <div class="mockup-placeholder">
-                    <h2>Build the ideal customized resume for each role</h2>
-                    <p>Leverage AI to align your resume with job requirements.</p>
-                    <button class="btn btn-primary">Create Resume Free</button>
-                    <!-- In a real implementation, this would be the <img> tag or complex HTML structure -->
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Complete Career Path</h1>
+                <p class="hero-subtitle">Elevate your job search with AI-powered resume optimization, application
+                    tracking, and interview preparation.</p>
+                <div class="hero-cta">
+                    <a href="signup.html" class="btn btn-primary btn-lg">Start Your Journey</a>
+                    <a href="#features" class="btn btn-outline btn-lg">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Content Sections (Additional Features) -->
-    <section class="features-grid-section">
+    <!-- Features Section -->
+    <section id="features" class="features-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Extra features to make you<br>shine above the rest.</h2>
-                <p>Discover every capability we provide to accelerate your career or internship hunt.</p>
-            </div>
-
+            <h2 class="section-title">Everything You Need to Land Your Dream Job</h2>
             <div class="features-grid">
-                <!-- Feature 1 -->
                 <div class="feature-card">
-                    <div class="card-icon">
-                        <!-- Placeholder Icon -->
-                    </div>
-                    <h3>Resume ATS Rating</h3>
-                    <p>Learn what needs improvement and how to enhance it.</p>
+                    <div class="feature-icon">📝</div>
+                    <h3>Resume Scorer</h3>
+                    <p>Get instant AI-powered feedback on your resume with actionable improvements.</p>
                 </div>
-
-                <!-- Feature 2 -->
                 <div class="feature-card">
-                    <div class="card-icon">
-                        <!-- Placeholder Icon -->
-                    </div>
-                    <h3>Craft personalized cover letters</h3>
-                    <p>Create customized cover letters.</p>
+                    <div class="feature-icon">🎯</div>
+                    <h3>Application Tracker</h3>
+                    <p>Keep track of all your job applications in one organized dashboard.</p>
                 </div>
-
-                <!-- Feature 3 -->
                 <div class="feature-card">
-                    <div class="card-icon">
-                        <!-- Placeholder Icon -->
-                    </div>
-                    <h3>Progress Tracker</h3>
-                    <p>Track all your career achievements and get promoted faster.</p>
+                    <div class="feature-icon">💡</div>
+                    <h3>Answer Agent</h3>
+                    <p>Generate tailored answers to interview questions based on your experience.</p>
                 </div>
-
-                <!-- Feature 4 -->
                 <div class="feature-card">
-                    <div class="card-icon">
-                        <!-- Placeholder Icon -->
-                    </div>
-                    <h3>Outreach Assistant</h3>
-                    <p>Generate custom networking emails to connect with professionals.</p>
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick Apply</h3>
+                    <p>Submit applications instantly with autofill powered by your profile.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Style Blue Section -->
-    <section class="footer-cta-section">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <h3>FEATURES</h3>
-            <ul class="footer-links">
-                <li><a href="#">Copilot</a></li>
-                <li><a href="#">Resume Builder</a></li>
-                <li><a href="#">Resume Review</a></li>
-            </ul>
+            <h2>Ready to Transform Your Job Search?</h2>
+            <p>Join thousands of job seekers who have found their dream careers with Job Assistant</p>
+            <a href="signup.html" class="btn btn-primary btn-lg">Get Started for Free</a>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+        <div class="container">
+            <p>&copy; 2026 Job Assistant. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="assets/js/main.js"></script>
 </body>

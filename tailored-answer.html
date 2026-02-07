@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailored Answer Agent - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <style>
+        .agent-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .text-area {
+            width: 100%;
+            height: 120px;
+            padding: 15px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .result-box {
+            display: none;
+            background: #F0FDFA;
+            border: 1px solid #CCFBF1;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+            animation: slideUp 0.3s ease;
+        }
+
+        .copy-btn {
+            float: right;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="dashboard-nav">
+        <div class="container nav-container">
+            <div class="brand-text" style="font-weight: 700; font-size: 1.25rem;">Job Assistant</div>
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">Tracker</a>
+                <a href="resume-scorer.html" class="nav-link">Resume Scorer</a>
+                <a href="tailored-answer.html" class="nav-link active">Answer Agent</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </div>
+            <div class="user-menu"
+                style="width: 40px; height: 40px; background: #e0f2f1; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <div class="agent-container">
+        <h1>Tailored Answer Agent</h1>
+        <p style="margin-bottom: 30px; color: var(--text-body);">Generate high-quality answers to application questions
+            based on your profile and the JD.</p>
+
+        <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <div class="input-group">
+                <label class="input-label">The Question</label>
+                <input type="text" class="text-area" style="height: auto;"
+                    placeholder="e.g., Why do you want to work at Google?" />
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Job Description (Optional Context)</label>
+                <textarea class="text-area" placeholder="Paste relevant JD parts here..."></textarea>
+            </div>
+
+            <button class="btn btn-primary" onclick="generateAnswer()">Generate Answer</button>
+        </div>
+
+        <div class="result-box" id="resultBox">
+            <span class="copy-btn" onclick="copyText()">Copy Text</span>
+            <h3 style="margin-bottom: 15px; color: #0F766E;">Generated Answer</h3>
+            <p style="line-height: 1.7; color: var(--text-dark);" id="answerText">
+                "I am excited about this opportunity at Google because it sits perfectly at the intersection of my
+                passion for scalable system design and my experience with large-scale distributed databases. Having
+                followed Google's work on Spanner, I have always admired the engineering culture that solves problems at
+                a global scale. In my previous role, I optimized query performance by 40%, a skill I am eager to bring
+                to the Google Cloud team..."
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function generateAnswer() {
+            const btn = document.querySelector('.btn-primary');
+            btn.innerHTML = 'Generating...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                document.getElementById('resultBox').style.display = 'block';
+                btn.innerHTML = 'Generate Answer';
+                btn.disabled = false;
+            }, 1500);
+        }
+
+        function copyText() {
+            // Mock copy
+            alert('Copied to clipboard!');
+        }
+    </script>
+</body>
+
+</html>

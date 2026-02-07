@@ -1,0 +1,324 @@
+/* Preferences Flow Layout */
+body {
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.preferences-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 30px;
+    width: 100%;
+    flex: 1;
+}
+
+.preferences-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.preferences-header h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.preferences-header p {
+    font-size: 1.2rem;
+    color: var(--text-body);
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #E5E7EB;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0%;
+    /* Dynamic */
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Option Cards Grid */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Enforce 4 columns */
+    gap: 25px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+/* Selectable Cards */
+.option-card {
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    /* Defined border */
+    border-radius: 16px;
+    padding: 30px 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    position: relative;
+    height: 100%;
+}
+
+.option-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.option-card.selected {
+    border-color: var(--primary-color);
+    background-color: #F0FDFA;
+    /* Very light teal tint */
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.option-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background: #F9FAFB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover .option-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--white);
+}
+
+.option-card.selected .option-icon {
+    background: var(--white);
+    transform: scale(1.1);
+}
+
+.option-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Footer / Navigation */
+.preferences-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-end;
+    /* Right align button */
+    align-items: center;
+}
+
+.btn-next {
+    min-width: 180px;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--text-light);
+}
+
+/* List Item Styles (for Roles/Industries) */
+.list-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.list-option:hover {
+    background-color: #F9FAFB;
+}
+
+.list-option.selected {
+    border-color: var(--primary-color);
+    background-color: var(--primary-light);
+}
+
+/* Dynamic Section (Sub-roles) */
+.sub-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #E5E7EB;
+    display: none;
+    /* Hidden by default */
+    animation: fadeIn 0.5s ease;
+}
+
+.sub-section.active {
+    display: block;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .options-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .preferences-container {
+        padding: 0 20px;
+    }
+
+    .options-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Step 4 Specific: Centered Flex for 5 items */
+#roleTypeGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+#roleTypeGrid .option-card {
+    flex: 0 1 220px;
+    /* Base width */
+    max-width: 250px;
+}
+
+/* Force 3-2 Layout for Step 4 */
+#roleTypeGrid {
+    max-width: 900px !important;
+    /* Constrain width to force wrap after 3 cards */
+    margin: 0 auto 50px auto !important;
+    /* Center the grid container */
+}
+
+/* Apply same centered 3-2 layout to Company Size (Step 5) */
+#companySizeGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 900px !important;
+    margin: 0 auto 50px auto !important;
+}
+
+#companySizeGrid .option-card {
+    flex: 0 1 220px;
+    max-width: 250px;
+}
+
+/* Step 7: Skills Layout */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.skill-tag {
+    padding: 12px 24px;
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    /* Changed from flex to inline-flex or just keep flex but ensure centering */
+    display: flex;
+    justify-content: center;
+    /* Center the text */
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    color: var(--text-dark);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    min-width: 100px;
+    /* Optional: minimum width for better look */
+    text-align: center;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.skill-tag.selected {
+    border-color: var(--primary-color);
+    background: #F0FDFA;
+    /* Light teal */
+    color: var(--primary-dark);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.skill-heart {
+    font-size: 1.1rem;
+    color: #D1D5DB;
+    /* Gray heart */
+    transition: all 0.2s ease;
+}
+
+.skill-heart:hover {
+    transform: scale(1.2);
+}
+
+.skill-heart.loved {
+    color: #EF4444;
+    /* Red heart */
+}
+/* Step 8: Status Grid - Centered 3 items */
+#statusGrid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+#statusGrid .option-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

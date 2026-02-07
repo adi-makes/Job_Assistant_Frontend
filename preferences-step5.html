@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 5: Company Size - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/preferences.css">
+<!--     <script src="assets/js/auth.js"></script>
+<!--     <script> -->
+<!--         if (!Auth || !Auth.isAuthenticated()) { -->
+<!--             window.location.href = 'login.html'; -->
+<!--         } -->
+<!--     </script>
+</head>
+
+<body>
+    <!-- Header Removed -->
+
+    <div class="preferences-container">
+        <!-- Progress -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 62.5%;"></div>
+        </div>
+
+        <div class="preferences-header">
+            <h1>Ideal company size?</h1>
+            <p>Select your preferences.</p>
+        </div>
+
+        <div class="options-grid" id="companySizeGrid">
+            <div class="option-card" data-value="seed">
+                <div class="option-icon">🌱</div>
+                <div class="option-label">Seed Stage<br><span
+                        style="font-size: 0.8em; color: var(--text-light); font-weight: 400;">1-10 employees</span>
+                </div>
+            </div>
+            <div class="option-card" data-value="early">
+                <div class="option-icon">🚀</div>
+                <div class="option-label">Early Stage<br><span
+                        style="font-size: 0.8em; color: var(--text-light); font-weight: 400;">11-50 employees</span>
+                </div>
+            </div>
+            <div class="option-card" data-value="mid">
+                <div class="option-icon">🏢</div>
+                <div class="option-label">Mid-Size<br><span
+                        style="font-size: 0.8em; color: var(--text-light); font-weight: 400;">51-200 employees</span>
+                </div>
+            </div>
+            <div class="option-card" data-value="large">
+                <div class="option-icon">🌆</div>
+                <div class="option-label">Large<br><span
+                        style="font-size: 0.8em; color: var(--text-light); font-weight: 400;">201-1000 employees</span>
+                </div>
+            </div>
+            <div class="option-card" data-value="enterprise">
+                <div class="option-icon">🌐</div>
+                <div class="option-label">Enterprise<br><span
+                        style="font-size: 0.8em; color: var(--text-light); font-weight: 400;">1000+ employees</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="preferences-footer">
+        <div class="container footer-content">
+            <a href="preferences-step6.html" id="nextBtn" class="btn btn-primary btn-next" disabled>Save & Continue</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/preferences.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setupSelectionLogic('option-card', 1, 5);
+        });
+    </script>
+</body>
+
+</html>

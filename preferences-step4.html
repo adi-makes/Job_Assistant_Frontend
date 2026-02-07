@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4: Role Type - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/preferences.css">
+<!--     <script src="assets/js/auth.js"></script>
+<!--     <script> -->
+<!--         if (!Auth || !Auth.isAuthenticated()) { -->
+<!--             window.location.href = 'login.html'; -->
+<!--         } -->
+<!--     </script>
+</head>
+
+<body>
+    <!-- Header Removed -->
+
+    <div class="preferences-container">
+        <!-- Progress -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 50%;"></div>
+        </div>
+
+        <div class="preferences-header">
+            <h1>What type of role are you<br>looking for?</h1>
+            <p>Select all that apply.</p>
+        </div>
+
+        <div class="options-grid" id="roleTypeGrid">
+            <div class="option-card" data-value="full-time">
+                <div class="option-icon">💼</div>
+                <div class="option-label">Full-time</div>
+            </div>
+            <div class="option-card" data-value="part-time">
+                <div class="option-icon">🕒</div>
+                <div class="option-label">Part-time</div>
+            </div>
+            <div class="option-card" data-value="contract">
+                <div class="option-icon">📄</div>
+                <div class="option-label">Contract</div>
+            </div>
+            <div class="option-card" data-value="internship">
+                <div class="option-icon">🎓</div>
+                <div class="option-label">Internship</div>
+            </div>
+            <div class="option-card" data-value="freelance">
+                <div class="option-icon">💻</div>
+                <div class="option-label">Freelance</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="preferences-footer">
+        <div class="container footer-content">
+            <a href="preferences-step5.html" id="nextBtn" class="btn btn-primary btn-next" disabled>Save & Continue</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/preferences.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setupSelectionLogic('option-card', 1, 5);
+        });
+    </script>
+</body>
+
+</html>

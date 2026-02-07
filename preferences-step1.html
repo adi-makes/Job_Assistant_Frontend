@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1: Your Values - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/preferences.css">
+<!--     <script src="assets/js/auth.js"></script>
+<!--     <script> -->
+<!--         if (!Auth || !Auth.isAuthenticated()) { -->
+<!--             window.location.href = 'login.html'; -->
+<!--         } -->
+<!--     </script>
+</head>
+
+<body>
+    <!-- Header Removed -->
+
+    <div class="preferences-container">
+        <!-- Progress -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 12.5%;"></div>
+        </div>
+
+        <div class="preferences-header">
+            <h1>What do you value most in<!--<br>--> your next role?</h1>
+            <p>Select up to 3 options.</p>
+        </div>
+
+        <div class="options-grid">
+            <!-- Option 1 -->
+            <div class="option-card" data-value="compensation">
+                <div class="option-icon">💰</div>
+                <div class="option-label">High Compensation</div>
+            </div>
+
+            <!-- Option 2 -->
+            <div class="option-card" data-value="wlb">
+                <div class="option-icon">⚖️</div>
+                <div class="option-label">Work-Life Balance</div>
+            </div>
+
+            <!-- Option 3 -->
+            <div class="option-card" data-value="growth">
+                <div class="option-icon">📈</div>
+                <div class="option-label">Career Growth</div>
+            </div>
+
+            <!-- Option 4 -->
+            <div class="option-card" data-value="culture">
+                <div class="option-icon">🤝</div>
+                <div class="option-label">Company Culture</div>
+            </div>
+
+            <!-- Option 5 -->
+            <div class="option-card" data-value="remote">
+                <div class="option-icon">🏠</div>
+                <div class="option-label">Remote Work</div>
+            </div>
+
+            <!-- Option 6 -->
+            <div class="option-card" data-value="impact">
+                <div class="option-icon">🌍</div>
+                <div class="option-label">Social Impact</div>
+            </div>
+
+            <!-- Option 7 -->
+            <div class="option-card" data-value="learning">
+                <div class="option-icon">🧠</div>
+                <div class="option-label">Learning & Development</div>
+            </div>
+
+            <!-- Option 8 -->
+            <div class="option-card" data-value="prestige">
+                <div class="option-icon">🏆</div>
+                <div class="option-label">Brand Prestige</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="preferences-footer">
+        <div class="container footer-content">
+            <a href="preferences-step2.html" id="nextBtn" class="btn btn-primary btn-next" disabled>Save & Continue</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/preferences.js"></script>
+    <script>
+        // Initial check to disable button
+        // Logic handled in preferences.js but verifying here
+        const btn = document.getElementById('nextBtn');
+        btn.addEventListener('click', (e) => {
+            if (btn.disabled) e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 6: Industries - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/preferences.css">
+    <style>
+        .industry-section {
+            margin-bottom: 40px;
+        }
+
+        .industry-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+    </style>
+<!--     <script src="assets/js/auth.js"></script>
+<!--     <script> -->
+<!--         if (!Auth || !Auth.isAuthenticated()) { -->
+<!--             window.location.href = 'login.html'; -->
+<!--         } -->
+<!--     </script>
+</head>
+
+<body>
+    <!-- Header Removed -->
+
+    <div class="preferences-container">
+        <!-- Progress -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 75%;"></div>
+        </div>
+
+        <div class="preferences-header">
+            <h1>Refine your industry preferences</h1>
+            <p>Select what you love, and what you avoid.</p>
+        </div>
+
+        <!-- Section 1: Want to work in -->
+        <div class="industry-section">
+            <h3 style="text-align: center; margin-bottom: 25px; font-size: 1.5rem; color: var(--primary-dark);">
+                Industries I want to work in</h3>
+
+            <!-- Search 1 -->
+            <div style="margin-bottom: 30px; display: flex; justify-content: center;">
+                <input type="text" id="searchWant" class="form-control" placeholder="Search industries..."
+                    style="font-size: 1rem; padding: 14px 24px; border-radius: 50px; max-width: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            </div>
+
+            <div class="options-grid" id="gridWant">
+                <div class="option-card" data-value="tech">
+                    <div class="option-label">Technology</div>
+                </div>
+                <div class="option-card" data-value="finance">
+                    <div class="option-label">Finance & Fintech</div>
+                </div>
+                <div class="option-card" data-value="healthcare">
+                    <div class="option-label">Healthcare & MedTech</div>
+                </div>
+                <div class="option-card" data-value="education">
+                    <div class="option-label">Education & EdTech</div>
+                </div>
+                <div class="option-card" data-value="retail">
+                    <div class="option-label">Retail & E-commerce</div>
+                </div>
+                <div class="option-card" data-value="media">
+                    <div class="option-label">Media & Entertainment</div>
+                </div>
+                <div class="option-card" data-value="automotive">
+                    <div class="option-label">Automotive</div>
+                </div>
+                <div class="option-card" data-value="energy">
+                    <div class="option-label">Energy & CleanTech</div>
+                </div>
+                <div class="option-card" data-value="aerospace">
+                    <div class="option-label">Aerospace & Defense</div>
+                </div>
+                <div class="option-card" data-value="consulting">
+                    <div class="option-label">Consulting</div>
+                </div>
+                <div class="option-card" data-value="realestate">
+                    <div class="option-label">Real Estate</div>
+                </div>
+                <div class="option-card" data-value="logistics">
+                    <div class="option-label">Logistics & Supply Chain</div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #E5E7EB; margin: 60px 0;">
+
+        <!-- Section 2: DO NOT want to work in -->
+        <div class="industry-section">
+            <h3 style="text-align: center; margin-bottom: 25px; font-size: 1.5rem; color: #EF4444;">Industries I DO NOT
+                want to work in</h3>
+
+            <!-- Search 2 -->
+            <div style="margin-bottom: 30px; display: flex; justify-content: center;">
+                <input type="text" id="searchAvoid" class="form-control" placeholder="Search to exclude..."
+                    style="font-size: 1rem; padding: 14px 24px; border-radius: 50px; max-width: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            </div>
+
+            <div class="options-grid" id="gridAvoid">
+                <div class="option-card" data-value="defense">
+                    <div class="option-label">Defense</div>
+                </div>
+                <div class="option-card" data-value="gambling">
+                    <div class="option-label">Gambling & Betting</div>
+                </div>
+                <div class="option-card" data-value="tobacco">
+                    <div class="option-label">Tobacco</div>
+                </div>
+                <div class="option-card" data-value="adult">
+                    <div class="option-label">Adult Entertainment</div>
+                </div>
+                <div class="option-card" data-value="crypto">
+                    <div class="option-label">Crypto / Web3</div>
+                </div>
+                <div class="option-card" data-value="oil">
+                    <div class="option-label">Oil & Gas</div>
+                </div>
+                <div class="option-card" data-value="fastfashion">
+                    <div class="option-label">Fast Fashion</div>
+                </div>
+                <div class="option-card" data-value="advertising">
+                    <div class="option-label">Advertising</div>
+                </div>
+                <div class="option-card" data-value="pharmaceuticals">
+                    <div class="option-label">Pharmaceuticals</div>
+                </div>
+                <div class="option-card" data-value="government">
+                    <div class="option-label">Government</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="preferences-footer">
+        <div class="container footer-content">
+            <a href="preferences-step7.html" id="nextBtn" class="btn btn-primary btn-next">Save & Continue</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/preferences.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Logic allows skipping (min 0) or selecting multiple
+            setupSelectionLogic('option-card', 0, 10);
+        });
+    </script>
+</body>
+
+</html>

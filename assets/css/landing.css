@@ -1,3 +1,100 @@
+/* Landing Navigation */
+.landing-nav {
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.brand-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-link-landing {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s;
+    padding: 8px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.nav-link-landing:hover {
+    color: var(--primary-color);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.btn-lg {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-dark);
+}
+
+.features-section {
+    padding: 100px 0;
+    background: var(--secondary-color);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-section {
+    padding: 80px 0;
+    text-align: center;
+    background: var(--primary-color);
+    color: white;
+}
+
+.cta-section h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.landing-footer {
+    padding: 40px 0;
+    text-align: center;
+    background: var(--text-dark);
+    color: white;
+}
+
 /* Header customization */
 .header {
     padding: 20px 0;
@@ -10,7 +107,7 @@
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -61,30 +158,38 @@
 /* Pill Navigation */
 .feature-pills {
     display: inline-flex;
+    gap: 10px;
+    /* Added spacing */
     background: var(--secondary-color);
-    padding: 5px;
+    padding: 8px;
+    /* Increased padding */
     border-radius: 50px;
     margin-bottom: 60px;
 }
 
 .pill {
-    padding: 10px 30px;
+    padding: 12px 35px;
+    /* Increased padding */
     border-radius: 40px;
-    cursor: pointer;
-    font-weight: 500;
+    cursor: default;
+    /* Since they are purely informational now */
+    font-weight: 600;
     color: var(--text-light);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pill.active {
-    /* Using active class for now */
     background: var(--white);
-    color: var(--text-dark);
-    box-shadow: var(--shadow-sm);
+    color: var(--primary-color);
+    /* Highlight with primary color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.pill:hover:not(.active) {
-    color: var(--text-body);
+.pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Image Placeholder */
@@ -134,7 +239,8 @@
     padding: 40px 30px;
     border-radius: 16px;
     transition: transform 0.3s ease;
-    text-align: left;
+    text-align: center;
+    /* Changed from left to center */
 }
 
 .feature-card:hover {
@@ -146,7 +252,11 @@
     height: 60px;
     background: var(--white);
     border-radius: 12px;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
+    /* Centered horizontally with bottom margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .feature-card h3 {
@@ -201,5 +311,136 @@
     .feature-pills {
         display: none;
         /* Hide complex pills on mobile for simplicity, or stack them */
+        max-width: 700px;
+        height: 400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
-}
+
+    .mockup-header {
+        height: 40px;
+        background: #F3F4F6;
+        border-bottom: 1px solid #E5E7EB;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    .dot.red {
+        background: #EF4444;
+    }
+
+    .dot.yellow {
+        background: #F59E0B;
+    }
+
+    .dot.green {
+        background: #10B981;
+    }
+
+    .mockup-body {
+        flex: 1;
+        display: flex;
+    }
+
+    .mockup-sidebar {
+        width: 20%;
+        background: #F9FAFB;
+        border-right: 1px solid #E5E7EB;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mockup-main {
+        flex: 1;
+        padding: 30px;
+        background: white;
+    }
+
+    .line {
+        background: #E5E7EB;
+        border-radius: 4px;
+    }
+
+    .line.sm {
+        height: 8px;
+        width: 80%;
+    }
+
+    .mockup-hero-line {
+        height: 20px;
+        width: 60%;
+        background: #E5E7EB;
+        margin-bottom: 30px;
+        border-radius: 4px;
+    }
+
+    .mockup-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .mockup-item {
+        height: 100px;
+        background: #F3F4F6;
+        border-radius: 8px;
+    }
+
+    .floating-badge {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        background: white;
+        padding: 15px 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .badge-icon {
+        font-size: 1.5rem;
+    }
+
+    .badge-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .badge-text span {
+        font-size: 0.8rem;
+        color: #6B7280;
+    }
+
+    .badge-text strong {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }

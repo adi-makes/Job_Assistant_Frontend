@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Job Assistant</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <script src="assets/js/auth.js"></script>
+    <script>
+        // Protect this page - require authentication
+        if (!Auth || !Auth.isAuthenticated()) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="dashboard-nav">
+        <div class="container nav-container">
+            <!-- Logo removed -->
+            <div class="brand-text" style="font-weight: 700; font-size: 1.25rem;">Dashboard</div>
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link active">Tracker</a>
+                <a href="resume-scorer.html" class="nav-link">Resume Scorer</a>
+                <a href="tailored-answer.html" class="nav-link">Answer Agent</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </div>
+            <div class="user-menu"
+                style="width: 40px; height: 40px; background: #e0f2f1; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Applications Drafted</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Submitted</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Interviews</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Offers</div>
+            </div>
+        </div>
+
+        <!-- Kanban Board -->
+        <div class="kanban-board">
+            <!-- Column 1 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span class="column-title">Not Submitted</span>
+                    <span class="column-count">3</span>
+                </div>
+                <!-- Card -->
+                <div class="app-card">
+                    <div class="app-title">Product Designer</div>
+                    <div class="app-company">Spotify</div>
+                    <div class="app-tags">
+                        <span class="tag match">95% Match</span>
+                        <span class="tag">Draft</span>
+                    </div>
+                </div>
+                <div class="app-card">
+                    <div class="app-title">Frontend Engineer</div>
+                    <div class="app-company">Airbnb</div>
+                    <div class="app-tags">
+                        <span class="tag match">88% Match</span>
+                        <span class="tag">Draft</span>
+                    </div>
+                </div>
+                <div class="app-card">
+                    <div class="app-title">UX Researcher</div>
+                    <div class="app-company">Linear</div>
+                    <div class="app-tags">
+                        <span class="tag match">92% Match</span>
+                        <span class="tag">Draft</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span class="column-title">Submitted</span>
+                    <span class="column-count">2</span>
+                </div>
+                <div class="app-card">
+                    <div class="app-title">Software Engineer</div>
+                    <div class="app-company">Google</div>
+                    <div class="app-tags">
+                        <span class="tag">Applied 2d ago</span>
+                    </div>
+                </div>
+                <div class="app-card">
+                    <div class="app-title">Product Manager</div>
+                    <div class="app-company">Notion</div>
+                    <div class="app-tags">
+                        <span class="tag">Applied 5d ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span class="column-title">Interview</span>
+                    <span class="column-count">1</span>
+                </div>
+                <div class="app-card">
+                    <div class="app-title">Senior Designer</div>
+                    <div class="app-company">Figma</div>
+                    <div class="app-tags">
+                        <span class="tag" style="background: #DBEAFE; color: #1E40AF;">Onsite</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span class="column-title">Rejected</span>
+                    <span class="column-count">0</span>
+                </div>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span class="column-title">Offer</span>
+                    <span class="column-count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

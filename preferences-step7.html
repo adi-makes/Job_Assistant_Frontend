@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Step 7: Skills - Job Assistant</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/preferences.css">
+        <!-- Internal styles moved to preferences.css -->
+
+        <div class="preferences-container">
+                <!-- Progress -->
+                <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 87.5%;"></div>
+                </div>
+
+                <div class="preferences-header">
+                        <h1>What are your top skills?</h1>
+                        <p>Click to select.</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div style="margin-bottom: 40px; display: flex; justify-content: center;">
+                        <input type="text" id="skillSearch" class="form-control"
+                                placeholder="Search skills (e.g. Python, Agile)..."
+                                style="font-size: 1.1rem; padding: 16px 24px; border-radius: 50px; max-width: 500px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                </div>
+
+                <div class="skill-list" id="skillList">
+                        <!-- Development -->
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>JavaScript</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Python</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>React</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Node.js</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>TypeScript</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Java</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>C++</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Go</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Rust</span></div>
+
+                        <!-- Data -->
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>SQL</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Data Analysis</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Machine Learning</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Tableau</span></div>
+
+                        <!-- Design -->
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Figma</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Adobe XD</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>UI/UX Design</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Prototyping</span></div>
+
+                        <!-- Product/Business -->
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Product Strategy</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Agile</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Scrum</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Roadmapping</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Market Research</span></div>
+
+                        <!-- Soft Skills -->
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Communication</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Leadership</span></div>
+                        <div class="skill-tag" onclick="toggleSkill(this)"><span>Problem Solving</span></div>
+                </div>
+        </div>
+
+        <footer class="preferences-footer">
+                <div class="container footer-content">
+                        <a href="preferences-step8.html" id="nextBtn" class="btn btn-primary btn-next">Save &
+                                Continue</a>
+                </div>
+        </footer>
+
+        <script src="assets/js/preferences.js"></script>
+
+        </body>
+
+</html>
